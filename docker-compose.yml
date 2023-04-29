@@ -1,0 +1,25 @@
+version: "3.9"
+
+volumes:
+  db-store:
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./infra/docker/php/Dockerfile
+      target: ${APP_BUILD_TARGET:-development}
+    ports:
+      - target: 8000
+        published: 8000
+        protocol: tcp
+        mode: host
+    volumes:
+      - type: bind
+        source: ./src
+        target: /workspace
+    environment:
+      - APP_DEBUG=${APP_DEBUG:-true}
+      - APP_ENV=${APP_ENV:-local}
+      - APP_URL=${APP_URL:-http://localhost}
+    entrypoint: ["php", "artisan", "serve", "--host=0.0.0.0"]
