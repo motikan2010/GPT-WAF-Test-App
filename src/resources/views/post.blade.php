@@ -6,10 +6,6 @@
     <title>Laravel</title>
 </head>
 <body>
-<form method="post" action="{{ route('post') }}">
-    <textarea name="msg"></textarea><br>
-    {{ csrf_field() }}
-    <input type="submit">
-</form>
+{{ $msg }}
 </body>
 </html>
