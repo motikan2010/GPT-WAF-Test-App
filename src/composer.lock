@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fe33f98a750b8c5a51b30c78bd3fab21",
+    "content-hash": "838fb661ea6df45f73f9650b3784fdfe",
     "packages": [
         {
             "name": "brick/math",
@@ -1801,6 +1801,56 @@
                 }
             ],
             "time": "2023-02-06T13:44:46+00:00"
+        },
+        {
+            "name": "motikan2010/gpt-waf",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/motikan2010/GPT-WAF.git",
+                "reference": "71dc61060df0114ecaef34841292a0b1c995376a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/motikan2010/GPT-WAF/zipball/71dc61060df0114ecaef34841292a0b1c995376a",
+                "reference": "71dc61060df0114ecaef34841292a0b1c995376a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "4.*",
+                "phpunit/phpunit": "^9.4"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Motikan2010\\GptWaf\\Provider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Motikan2010\\GptWaf\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "motikan2010",
+                    "email": "motikan2010@gmail.com"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/motikan2010/GPT-WAF/issues",
+                "source": "https://github.com/motikan2010/GPT-WAF/tree/v1.0.0"
+            },
+            "time": "2023-04-28T13:42:06+00:00"
         },
         {
             "name": "nesbot/carbon",

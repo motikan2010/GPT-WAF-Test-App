@@ -18,7 +18,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/post', function (Request $request) {
-    $msg = $request->post('msg');
-    return view('post')->with(['msg' => $msg]);
-})->name('post');
+Route::group(['middleware' => 'gpt-waf'], function () {
+
+    Route::post('/post', function (Request $request) {
+        $msg = $request->post('msg');
+        return view('post')->with(['msg' => $msg]);
+    })->name('post');
+
+});
